@@ -24,6 +24,12 @@ jobs:
     - run: npm ci
     - run: npx playwright install
     - run: npm test
+  
+    - uses: actions/upload-artifact@master
+      with:
+        name: allure-results
+        path: allure-results
+        retention-days: 20
     
     - name: Test marketplace action
       uses: simple-elf/allure-report-action@master
