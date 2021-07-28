@@ -1,6 +1,6 @@
 [ {
-  "buildOrder" : 5,
-  "reportUrl" : "https://elaichenkov.github.io/allure-playwright/5/",
+  "buildOrder" : 6,
+  "reportUrl" : "https://elaichenkov.github.io/allure-playwright/6/",
   "reportName" : "Allure Report with history",
   "data" : {
     "Product defects" : 1
