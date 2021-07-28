@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expect(received).toBe(expected) // Object.is equality\n\n- Expected  -  1\n+ Received  + 17\n\n- We couldn’t find any repositories matching 'qzzsa' You could try an advanced search.\n+\n+     \n+     \n+\n+\n+\n+\n+   \n+     \n+       We couldn’t find any repositories matching 'qzzsa'\n+     \n+\n+       You could try an advanced search.\n+\n+\n+\n+",
+      "children" : [ {
+        "name" : "should verify \"We couldn’t find any repositories\" message, after entering invalid keyword",
+        "uid" : "787d0bf973b09b6f",
+        "parentUid" : "70ea68863addd938e6f98d9cf9158142",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627483363318,
+          "stop" : 1627483366147,
+          "duration" : 2829
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "70ea68863addd938e6f98d9cf9158142"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
