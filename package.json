@@ -7,7 +7,7 @@
     "allure:generate": "npx allure generate ./allure-results --clean",
     "allure:open": "npx allure open ./allure-report",
     "test": "npx playwright test || :",
-    "posttest": "npm run allure:generate && npm run allure:open"
+    "posttest": "npm run allure:generate"
   },
   "keywords": [],
   "author": "",
