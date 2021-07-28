@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Jul 28 12:36:48 GMT 2021","Wed Jul 28 12:36:51 GMT 2021","3785","chromium","tests/github-search.test.ts","GitHub - Search Result","","","should verify search result with valid repository name",""
-"failed","Wed Jul 28 12:36:51 GMT 2021","Wed Jul 28 12:36:54 GMT 2021","2155","chromium","tests/github-search.test.ts","GitHub - Search Result","","","should verify ""We couldn’t find any repositories"" message, after entering invalid keyword",""
