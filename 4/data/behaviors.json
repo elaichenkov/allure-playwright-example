@@ -1,0 +1,31 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "should verify search result with valid repository name",
+    "uid" : "10b8700baf944571",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1627475808191,
+      "stop" : 1627475811976,
+      "duration" : 3785
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should verify \"We couldn’t find any repositories\" message, after entering invalid keyword",
+    "uid" : "8e4bedb4a92648ab",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1627475811976,
+      "stop" : 1627475814131,
+      "duration" : 2155
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "behaviors"
+}
