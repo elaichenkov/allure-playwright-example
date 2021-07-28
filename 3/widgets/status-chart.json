@@ -1,0 +1,21 @@
+[ {
+  "uid" : "b9bda0f869b84b82",
+  "name" : "should verify search result with valid repository name",
+  "time" : {
+    "start" : 1627477250999,
+    "stop" : 1627477254721,
+    "duration" : 3722
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d3c8906bd161f892",
+  "name" : "should verify \"We couldn’t find any repositories\" message, after entering invalid keyword",
+  "time" : {
+    "start" : 1627477254722,
+    "stop" : 1627477256918,
+    "duration" : 2196
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]
