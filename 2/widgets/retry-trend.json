@@ -1,6 +1,6 @@
 [ {
-  "buildOrder" : 1,
-  "reportUrl" : "https://elaichenkov.github.io/allure-playwright/1/",
+  "buildOrder" : 2,
+  "reportUrl" : "https://elaichenkov.github.io/allure-playwright/2/",
   "reportName" : "Allure Report with history",
   "data" : {
     "run" : 2,

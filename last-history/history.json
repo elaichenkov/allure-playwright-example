@@ -9,13 +9,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "98e29a9efe86706c",
-      "reportUrl" : "https://elaichenkov.github.io/allure-playwright/1//#testresult/98e29a9efe86706c",
+      "uid" : "ff4eed54d612487",
+      "reportUrl" : "https://elaichenkov.github.io/allure-playwright/2//#testresult/ff4eed54d612487",
       "status" : "passed",
       "time" : {
-        "start" : 1627476881981,
-        "stop" : 1627476885848,
-        "duration" : 3867
+        "start" : 1627477012487,
+        "stop" : 1627477015779,
+        "duration" : 3292
       }
     } ]
   },
@@ -29,14 +29,14 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "1edf981da6c4b475",
-      "reportUrl" : "https://elaichenkov.github.io/allure-playwright/1//#testresult/1edf981da6c4b475",
+      "uid" : "c3595ce648efe275",
+      "reportUrl" : "https://elaichenkov.github.io/allure-playwright/2//#testresult/c3595ce648efe275",
       "status" : "failed",
       "statusDetails" : "expect(received).toBe(expected) // Object.is equality\n\n- Expected  -  1\n+ Received  + 17\n\n- We couldn’t find any repositories matching 'qzzsa' You could try an advanced search.\n+\n+     \n+     \n+\n+\n+\n+\n+   \n+     \n+       We couldn’t find any repositories matching 'qzzsa'\n+     \n+\n+       You could try an advanced search.\n+\n+\n+\n+",
       "time" : {
-        "start" : 1627476885849,
-        "stop" : 1627476888432,
-        "duration" : 2583
+        "start" : 1627477015779,
+        "stop" : 1627477017991,
+        "duration" : 2212
       }
     } ]
   }

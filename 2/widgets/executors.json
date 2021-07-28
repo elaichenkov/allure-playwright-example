@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://elaichenkov.github.io/allure-playwright",
+  "buildOrder" : 2,
+  "buildName" : "GitHub Actions Run #1074946021",
+  "buildUrl" : "https://github.com/elaichenkov/allure-playwright/actions/runs/1074946021",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://elaichenkov.github.io/allure-playwright/2/"
+} ]
