@@ -6,4 +6,4 @@
 * GitHub Actions
 * GitHub Pages
 
-Check out the published [report](https://elaichenkov.github.io/allure-playwright/4)
+Check out the published [report](https://elaichenkov.github.io/allure-playwright/1)
