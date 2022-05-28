@@ -1,6 +1,8 @@
 # Use the latest 2.1 version of CircleCI pipeline process engine.
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
+orbs:
+  openjdk-install: cloudesire/openjdk-install@1.2.3
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -11,6 +13,7 @@ jobs:
       NODE_ENV: development
       ENV JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64/
     steps:
+      - openjdk-install/openjdk
       - run: export JAVA_HOME
       - checkout
       - run: npm install
