@@ -14,7 +14,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npx playwright install --with-deps
+      - run: npm i -D playwright @playwright/test 
       - run: npx playwright test --reporter=line
 
 # Invoke jobs via workflows
