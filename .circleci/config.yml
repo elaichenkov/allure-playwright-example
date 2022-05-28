@@ -14,7 +14,7 @@ jobs:
       ENV JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64/
     steps:
       - openjdk-install/openjdk
-      - run: export JAVA_HOME
+      - run: export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
       - checkout
       - run: npm install
       - run: npm i -D playwright @playwright/test
