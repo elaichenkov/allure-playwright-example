@@ -12,6 +12,7 @@ jobs:
     environment:
       NODE_ENV: development
     steps:
+      - docker/install-docker
       - run: docker exec -u root -t -i container_id /bin/bash
       - run: sudo apt-get update
       - run: sudo apt install openjdk-8-jdk
