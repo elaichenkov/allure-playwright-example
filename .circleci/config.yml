@@ -14,8 +14,12 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm i -D playwright @playwright/test 
-      - run: npx playwright test --reporter=line
+      - run: npm i -D playwright @playwright/test
+      - run: npm i -D experimental-allure-playwright 
+      - run: npm i -D allure-commandline
+      - run: npx playwright test --reporter=experimental-allure-playwright 
+      - run: npx allure generate ./allure-results --clean
+      - run: allure serve allure-results
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
