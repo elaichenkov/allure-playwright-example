@@ -9,6 +9,8 @@ jobs:
       - image: mcr.microsoft.com/playwright:v1.22.0-focal
     environment:
       NODE_ENV: development
+    services:
+    - docker
     steps:
       - run: docker exec -u root -t -i container_id /bin/bash
       - run: sudo apt-get update
