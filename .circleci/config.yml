@@ -9,6 +9,7 @@ jobs:
       - image: mcr.microsoft.com/playwright:v1.22.0-focal
     environment:
       NODE_ENV: development
+      JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
     steps:
       - checkout
       - run: npm install
