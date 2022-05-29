@@ -24,7 +24,7 @@ jobs:
       - run: npm i -D allure-commandline
       - run: npx playwright test --reporter=line,experimental-allure-playwright ||true
       - run: npx allure generate ./allure-results --clean
-      - run: npm install gh-pages --save-dev
+      - run: npm install gh-pages -g
       - run: gh-pages --dist ./allure-report
 
 # Invoke jobs via workflows
