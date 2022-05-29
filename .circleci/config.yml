@@ -10,6 +10,9 @@ jobs:
     environment:
       NODE_ENV: development
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "d6:36:58:af:d8:57:47:db:30:77:62:ea:40:f7:03:03"
       - checkout
       - run: npm install
       - run: npm install -g docker 
@@ -27,9 +30,6 @@ jobs:
       - run: npm install gh-pages -g
       - run: git config user.email "anne.h@mailfence.com"
       - run: git config user.name "anneH"
-      - add_ssh_keys:
-          fingerprints:
-            - "SHA256:oDHwyF0fr5b3DU7gtYR2omumwPmJZCw5fG2Umv5cQvc"
       - run: gh-pages --dist ./allure-report
 
 # Invoke jobs via workflows
