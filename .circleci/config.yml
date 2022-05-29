@@ -24,7 +24,7 @@ jobs:
       - run: npm i -D allure-commandline
       - run: npx playwright test --reporter=line,experimental-allure-playwright ||true
       - run: npx allure generate ./allure-results --clean
-      - run: npx allure open ./allure-report
+      - run: npx allure serve
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
