@@ -25,8 +25,11 @@ jobs:
       - run: npx playwright test --reporter=line,experimental-allure-playwright ||true
       - run: npx allure generate ./allure-results --clean
       - run: npm install gh-pages -g
-      - run: git config user.email "anne.h@mailfence.com"
-      - run: git config user.name "anneH"
+      # - run: git config user.email "anne.h@mailfence.com"
+      # - run: git config user.name "anneH"
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:oDHwyF0fr5b3DU7gtYR2omumwPmJZCw5fG2Umv5cQvc"
       - run: gh-pages --dist ./allure-report
 
 # Invoke jobs via workflows
