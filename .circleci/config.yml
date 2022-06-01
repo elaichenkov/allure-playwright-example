@@ -25,7 +25,7 @@ jobs:
       - run: npm i -D playwright @playwright/test
       - run: npm i -D experimental-allure-playwright 
       - run: npm i -D allure-commandline
-      - run: npx playwright test --reporter=line,experimental-allure-playwright ||true
+      - run: npx playwright test --reporter=experimental-allure-playwright ||true
       - run: npx allure generate ./allure-results --clean
       - run: npm install gh-pages -g
       - run: git config user.email "anne.h@mailfence.com"
