@@ -28,7 +28,7 @@ jobs:
       - run:
           name: run tests and create report 
           command: | 
-             npx playwright test --reporter=experimental-allure-playwright || true
+             npx playwright test --reporter=experimental-allure-playwright
              npx allure generate ./allure-results --clean
              npm install gh-pages -g
              git config user.email "anne.h@mailfence.com"
