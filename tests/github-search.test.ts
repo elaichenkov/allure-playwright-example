@@ -22,7 +22,7 @@ test.describe('GitHub - Search Result', () => {
     expect(await page.textContent(firstSearchResultLink)).toBe(expectedLink);
   });
   
-    test('should verify search result with valid repository name 2', async ({ page }) => {
+  test('should verify search result with valid repository name 2', async ({ page }) => {
     // Selectors
     const firstSearchResultLink = '.repo-list li a';
 
