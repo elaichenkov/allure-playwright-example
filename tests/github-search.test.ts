@@ -36,7 +36,7 @@ test.describe('GitHub - Search Result', () => {
     expect.skip(await page.textContent(firstSearchResultLink)).toBe(expectedLink);
   });
 
-  test('should verify "We couldn’t find any repositories" message, after entering invalid keyword', async ({ page }) => {
+  test.skip('should verify "We couldn’t find any repositories" message, after entering invalid keyword', async ({ page }) => {
     // Selectors
     const notFoundMessage = '.blankslate';
 
