@@ -27,22 +27,22 @@ jobs:
       - run: npm i -D allure-commandline
       - run: npx playwright test --reporter=experimental-allure-playwright || true
       - run:
+          name: Generate Allure Report on failure
+          command: | 
+              npx allure generate ./allure-results --clean
+              npm install gh-pages -g
+              git config user.email "anne.h@mailfence.com"
+              git config user.name "anneH"
+              gh-pages --dist ./allure-report
+          when: on_fail
+      - run:
           name: Generate Allure Report on success
           command: | 
               npx allure generate ./allure-results --clean
               npm install gh-pages -g
               git config user.email "anne.h@mailfence.com"
               git config user.name "anneH"
-              gh-pages --dist ./allure-report
-      - run:
-          name: Generate Allure Report on failure too
-          command: | 
-              npx allure generate ./allure-results --clean
-              npm install gh-pages -g
-              git config user.email "anne.h@mailfence.com"
-              git config user.name "anneH"
-              gh-pages --dist ./allure-report
-          when: on_fail     
+              gh-pages --dist ./allure-report    
 
 
 # Invoke jobs via workflows
