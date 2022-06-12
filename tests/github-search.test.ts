@@ -21,6 +21,20 @@ test.describe('GitHub - Search Result', () => {
 
     expect(await page.textContent(firstSearchResultLink)).toBe(expectedLink);
   });
+  
+    test('should verify search result with valid repository name 2', async ({ page }) => {
+    // Selectors
+    const firstSearchResultLink = '.repo-list li a';
+
+    // Test data
+    const keyword = 'playwright2';
+    const expectedLink = 'microsoft/playwright2';
+
+    await page.fill(searchField, keyword);
+    await page.press(searchField, 'Enter');
+
+    expect(await page.textContent(firstSearchResultLink)).toBe(expectedLink);
+  });
 
   test('should verify "We couldn’t find any repositories" message, after entering invalid keyword', async ({ page }) => {
     // Selectors
