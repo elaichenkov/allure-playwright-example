@@ -25,7 +25,7 @@ jobs:
       - run: npm i -D playwright @playwright/test
       - run: npm i -D experimental-allure-playwright 
       - run: npm i -D allure-commandline
-      - run: npx playwright test --reporter=experimental-allure-playwright ||true
+      - run: npx playwright test --reporter=experimental-allure-playwright
       - run:
           name: Generate Allure Report
           command: | 
