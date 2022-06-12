@@ -34,8 +34,15 @@ jobs:
              git config user.email "anne.h@mailfence.com"
              git config user.name "anneH"
              gh-pages --dist ./allure-report
-    
-
+      - run:
+          name: Generate Allure Report on failure
+          command: | 
+              npx allure generate ./allure-results --clean
+              npm install gh-pages -g
+              git config user.email "anne.h@mailfence.com"
+              git config user.name "anneH"
+              gh-pages --dist ./allure-report
+          when: on_fail
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
