@@ -42,5 +42,9 @@ jobs:
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   e2e-test-workflow:
+    triggers:
+      - schedule: 
+         cron: "0 0 * * *"
     jobs:
       - playwright-test
+
