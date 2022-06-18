@@ -55,13 +55,13 @@ workflows:
                 mentions: 'https://anneh.github.io/allure-playwright-example/'
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          cron: "00 00 * * *"
           filters:
             branches:
               only:
                 - circleci-project-setup
       - schedule:
-          cron: "0 23 * * *"
+          cron: "00 23 * * *"
           filters:
             branches:
               only:
