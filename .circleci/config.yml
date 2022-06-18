@@ -53,16 +53,16 @@ workflows:
                 channel: circlecI
                 event: always
                 mentions: 'https://anneh.github.io/allure-playwright-example/'
-    # triggers:
-    #   - schedule:
-    #       cron: "0 19 * * *"
-    #       filters:
-    #         branches:
-    #           only:
-    #             - circleci-project-setup
-    #   - schedule:
-    #       cron: "0 21 * * *"
-    #       filters:
-    #         branches:
-    #           only:
-    #             - circleci-project-setup
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - circleci-project-setup
+      - schedule:
+          cron: "0 23 * * *"
+          filters:
+            branches:
+              only:
+                - circleci-project-setup
