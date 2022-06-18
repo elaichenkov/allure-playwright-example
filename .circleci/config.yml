@@ -47,6 +47,7 @@ workflows:
   e2e-test-workflow:
     jobs:
       - playwright-test:
+          context: slack
           post-steps:
             - slack/notify:
                 channel: circlecI
