@@ -61,7 +61,7 @@ workflows:
               only:
                 - circleci-project-setup
       - schedule:
-          cron: '00 23 * * *'
+          cron: '00 19 * * *'
           filters:
             branches:
               only:
