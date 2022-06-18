@@ -44,7 +44,7 @@ jobs:
       #     path: ./allure-report
           # destination: /test-results
       - store_test_results:
-         path: /allure-report
+         path: allure-report
          
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
