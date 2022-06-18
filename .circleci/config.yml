@@ -40,8 +40,8 @@ jobs:
               git config user.name "anneH"
               gh-pages --dist ./allure-report
           when: always
-      - store_artifacts:
-          path: ./allure-results
+      # - store_artifacts:
+      #     path: ./allure-report
           # destination: /test-results
       - store_test_results:
          path: ./allure-results
