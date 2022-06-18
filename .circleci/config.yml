@@ -52,7 +52,7 @@ workflows:
             - slack/notify:
                 channel: circlecI
                 event: always
-                mentions: <https://anneh.github.io/allure-playwright-example/|Allure Report>
+                mentions: '<https://anneh.github.io/allure-playwright-example/|Allure Report>'
     triggers:
       - schedule:
           cron: '00 00 * * *'
