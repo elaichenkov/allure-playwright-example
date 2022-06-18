@@ -43,7 +43,7 @@ jobs:
       # - store_artifacts:
       #     path: ./allure-report
           # destination: /test-results
-      - store_test_results:
+      - store_artifacts:
            path: allure-report/index.html
          
 # Invoke jobs via workflows
