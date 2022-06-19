@@ -81,19 +81,7 @@ workflows:
                             }
                           ]
                         },
-                        {
-                          "type": "section",
-                          "fields": [
-                            {
-                              "type": "mrkdwn",
-                              "text": "*Project*: $CIRCLE_PROJECT_REPONAME"
-                            },
-                            {
-                              "type": "mrkdwn",
-                              "text": "*Branch*: $CIRCLE_BRANCH"
-                            }
-                          ]
-                        },
+                       
                         {
                           "type": "actions",
                           "elements": [
