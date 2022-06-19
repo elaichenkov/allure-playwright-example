@@ -58,8 +58,30 @@ workflows:
           post-steps:
              - slack/notify:
                  channel: circleci
+                #  event: always
+                #  mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages> <https://output.circle-artifacts.com/output/job/$CIRCLE_WORKFLOW_ID/artifacts/0/allure-report/index.html|Allure Report in CircleCi>"
+              
                  event: always
-                 mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages> <https://output.circle-artifacts.com/output/job/$CIRCLE_WORKFLOW_ID/artifacts/0/allure-report/index.html|Allure Report in CircleCi>"
+                 custom: |
+                  {
+                    "blocks": [
+                      {
+                        "type": "section",
+                        "text": {
+                          "type": "mrkdwn",
+                          "text": "Current Job: $CIRCLE_JOB"
+                        }
+                      },
+                      {
+                        "type": "section",
+                        "text": {
+                          "type": "mrkdwn",
+                          "text": "Write some text here"
+                        }
+                      }
+                    ]
+                    }
+              
               # - slack/notify:
               #     event: pass
               #     channel: circleci
