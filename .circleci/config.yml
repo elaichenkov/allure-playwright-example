@@ -58,67 +58,10 @@ workflows:
           post-steps:
              - slack/notify:
                  channel: circleci
-                #  event: always
+            
                 #  mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages> <https://output.circle-artifacts.com/output/job/$CIRCLE_WORKFLOW_ID/artifacts/0/allure-report/index.html|Allure Report in CircleCi>"
                  mentions: "<https://output.circle-artifacts.com/output/job/${CIRCLE_WORKFLOW_JOB_ID}/artifacts/0/allure-report/index.html|Allure Report in CircleCi>"
-                 event: always
-                 custom: |
-                  {
-                    "blocks": [
-                      {
-                        "type": "section",
-                        "text": {
-                          "type": "mrkdwn",
-                          "text": "Current Job: $CIRCLE_JOB"
-                        }
-                      },
-                      {
-                        "type": "section",
-                        "text": {
-                          "type": "mrkdwn",
-                          "text": "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages> <https://output.circle-artifacts.com/output/job/$CIRCLE_WORKFLOW_ID/artifacts/0/allure-report/index.html|Allure Report in CircleCi>"
-                        }
-                      }
-                    ]
-                    }
-              
-              # - slack/notify:
-              #     event: pass
-              #     channel: circleci
-              #     custom: |
-              #      {
-              #         "text": "CircleCI job succeeded!",              
-              #         "blocks": [
-              #           {
-              #             "type": "header",
-              #             "text": {
-              #               "type": "plain_text",
-              #               "text": "Job Successful. :tada:",
-              #               "emoji": true
-              #             }
-              #           },
-              #               {
-              #                 "type": "mrkdwn",
-              #                 "text": "*Job*: ${CIRCLE_JOB}"
-              #               }
-              #             ]
-              #           },
-                       
-              #           {
-              #             "type": "actions",
-              #             "elements": [
-              #               {
-              #                 "type": "button",
-              #                 "text": {
-              #                   "type": "plain_text",
-              #                   "text": "View Job"
-              #                 },
-              #                 "url": "${CIRCLE_BUILD_URL}"
-              #               }
-              #             ]
-              #           }
-              #         ]
-              #       }
+                 
     # triggers:
     #   - schedule:
     #       cron: '00 00 * * *'
