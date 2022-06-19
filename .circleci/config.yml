@@ -68,7 +68,7 @@ workflows:
     #           only:
     #             - circleci-project-setup
       - schedule:
-          cron: '00 23 * * *'
+          cron: '0 1 * * 1' #Sunday at 6pm
           filters:
             branches:
               only:
