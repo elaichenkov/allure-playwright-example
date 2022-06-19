@@ -56,10 +56,58 @@ workflows:
       - playwright-test:
           context: slack
           post-steps:
-            - slack/notify:
-                channel: circlecI
-                event: always
-                mentions: '<https://anneh.github.io/allure-playwright-example/|Allure Report>'
+            # - slack/notify:
+            #     channel: circlecI
+            #     event: always
+            #     mentions: '<https://anneh.github.io/allure-playwright-example/|Allure Report>'
+              - slack/notify:
+                  event: pass
+                  custom: |
+                   {
+                      "text": "CircleCI job succeeded!",              
+                      "blocks": [
+                        {
+                          "type": "header",
+                          "text": {
+                            "type": "plain_text",
+                            "text": "Job Successful. :tada:",
+                            "emoji": true
+                          }
+                        },
+                            {
+                              "type": "mrkdwn",
+                              "text": "*Job*: ${CIRCLE_JOB}"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "section",
+                          "fields": [
+                            {
+                              "type": "mrkdwn",
+                              "text": "*Project*: $CIRCLE_PROJECT_REPONAME"
+                            },
+                            {
+                              "type": "mrkdwn",
+                              "text": "*Branch*: $CIRCLE_BRANCH"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "actions",
+                          "elements": [
+                            {
+                              "type": "button",
+                              "text": {
+                                "type": "plain_text",
+                                "text": "View Job"
+                              },
+                              "url": "${CIRCLE_BUILD_URL}"
+                            }
+                          ]
+                        }
+                      ]
+                    }
     # triggers:
     #   - schedule:
     #       cron: '00 00 * * *'
