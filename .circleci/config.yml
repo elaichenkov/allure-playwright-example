@@ -62,6 +62,7 @@ workflows:
             #     mentions: '<https://anneh.github.io/allure-playwright-example/|Allure Report>'
               - slack/notify:
                   event: pass
+                  channel: circleci
                   custom: |
                    {
                       "text": "CircleCI job succeeded!",              
