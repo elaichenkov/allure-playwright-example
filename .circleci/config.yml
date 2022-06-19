@@ -58,7 +58,7 @@ workflows:
           post-steps:
              - slack/notify:
                  channel: circleci
-                 mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>
+                 mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>"
                  
     # triggers:
     #   - schedule:
