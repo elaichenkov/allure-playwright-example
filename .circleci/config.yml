@@ -53,12 +53,12 @@ workflows:
   version: 2
   e2e-test-workflow:
     jobs:
-      - playwright-test
-          # context: slack
-          # post-steps:
-          #    - slack/notify:
-          #        channel: circleci
-          #        mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>"
+      - playwright-test:
+           context: slack
+           post-steps:
+              - slack/notify:
+                  channel: circleci
+                  mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>"
                  
     # triggers:
     # #   - schedule:
