@@ -60,10 +60,13 @@ workflows:
       - playwright-test:
            context: slack
            post-steps:
-              - slack/notify:
-                  channel: circleci
-                  mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>"
-                when: << pipeline.parameters.slack_notify>>     
+             - when:
+                condition: << pipeline.parameters.slack_notify>>
+                steps:
+                 - slack/notify:
+                    channel: circleci
+                    mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>"
+                    
     # triggers:
     # #   - schedule:
     # #       cron: '00 00 * * *'
