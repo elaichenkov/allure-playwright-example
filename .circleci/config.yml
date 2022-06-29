@@ -3,6 +3,10 @@
 version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+parameters:
+  slack_notify:
+    type: boolean
+    default: true
 orbs:
   slack: circleci/slack@4.10.1
 jobs:
@@ -59,7 +63,7 @@ workflows:
               - slack/notify:
                   channel: circleci
                   mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>"
-                 
+                when: << pipeline.parameters.slack_notify>>     
     # triggers:
     # #   - schedule:
     # #       cron: '00 00 * * *'
