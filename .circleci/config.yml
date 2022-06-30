@@ -76,7 +76,7 @@ workflows:
     # #             - circleci-project-setup
     #   - schedule:
     #       cron: '0 0 * * 1' #Sunday at 5pm
-    #       filters:
-    #         branches:
-    #           only:
-    #             - circleci-project-setup
+           filters:
+             branches:
+               only:
+                 - circleci-project-setup
