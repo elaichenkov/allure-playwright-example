@@ -66,7 +66,6 @@ workflows:
                  - slack/notify:
                     channel: circleci
                     mentions: "<https://anneh.github.io/allure-playwright-example/|Allure Report in Github Pages>"
-                    
     # triggers:
     # #   - schedule:
     # #       cron: '00 00 * * *'
