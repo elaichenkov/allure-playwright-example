@@ -7,7 +7,7 @@ const config: PlaywrightTestConfig = {
   },
   reporter: [
     ['line'], 
-    ['experimental-allure-playwright']
+    ['allure-playwright']
   ],
 };
 
