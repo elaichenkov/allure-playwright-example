@@ -9,7 +9,7 @@ test.describe('GitHub - Search Result', () => {
   });
 
   test('should verify search result with valid repository name', async ({ page }) => {
-    // Selectors check
+    // Selectors changes
     const firstSearchResultLink = '.repo-list li a';
 
     // Test data
